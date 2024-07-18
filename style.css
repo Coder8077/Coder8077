@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --text:hsl(0, 0%, 100%);
+    --link:rgb(255, 255, 255);
+    --nav:rgb(81, 43, 177);
+    --body:rgb(85, 51, 179);
+    --footer:rgb(61, 35, 154);
+    --scroll-thumb:rgb(0, 170, 249);
+    --scroll-bar:rgba(0, 0, 0, 0) ;
+}
+:root{
+    --1:rgb(6, 58, 83) ;
+    --2:rgb(17, 71, 96);
+    --3: rgb(3, 175, 255);
+}
+
+body {
+    color: var(--text);
+    background: var(--body);
+    text-transform:capitalize;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+    background: var(--scroll-bar);
+}
+
+/* Elements */
+button {
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid #fff;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 900;
+    color:rgb(6, 125, 125);
+}
+button a{
+    color:rgb(6, 125, 125);
+}
+button:hover {
+    border-color: rgb(3, 175, 255);
+    background: rgb(219, 219, 243);
+}
+
+
+
+::placeholder {
+    color: rgb(6, 125, 125);
+}
+::selection {
+    color: rgb(3, 175, 255);
+    background: rgba(255, 255, 255, 0.138);
+}
+
+/* Header */
+
+nav {
+    height: 100px;
+    width: 100%;
+    background: var(--nav);
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: auto 15px;
+}
+
+.span {
+    color: rgb(3, 175, 255);
+}
+
+.links {
+    margin: auto 5px;
+}
+
+.links ul li {
+    list-style: none;
+    display: inline;
+    font-size: 15px;
+
+}
+
+a {
+    text-decoration: none;
+    color:var(--link);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+a::after{
+    content: '';
+    position: absolute;
+    background: rgb(3, 175, 255);
+    height: 4px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 1s;
+    border-bottom-right-radius: 133px;
+}
+a:hover:after{
+    width: 100%;
+}
+/* Main Content */
+
+main {
+    height: 86vh;
+    width: 100%;
+    overflow: scroll;
+}
+
+main::-webkit-scrollbar {
+    background: var(--scroll-bar);
+    width: 5px;
+    height: 0;
+}
+
+main::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb);
+}
+
+main .card {
+    min-height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.card img {
+    display: flex;
+    margin: 10px auto;
+    height: 100px;
+    width: 100px;
+}
+.gallery img{
+    display:inline-block;
+    
+}
+
+.course h1 {
+    margin: 10px;
+}
+
+.course img {
+    background: #fff;
+    border-radius: 5px;
+    width: auto;
+    margin: 10px;
+    border: none;
+}
+
+.item {
+    text-align: center;
+    display: inline-block;
+
+}
+
+.card p {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.container h1,
+.container input,
+.container textarea{
+    margin: 10px;
+    padding: 10px;
+    resize: none;
+    border: 5px solid #fff;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 900;
+}
+.container h1 {
+    border: 0;
+}
+.container input:hover,
+.container textarea:hover{
+    border-color: rgb(3, 175, 255);
+    background: rgb(219, 219, 243);
+}
+.projects{
+    background: #000;
+    height: 100%;
+    width: 100%;
+}
+
+/* footer */
+
+footer {
+    background:var(--footer);
+}
+
+footer .logo h1 {
+    text-align: center;
+    margin: 10px auto;
+}
+
+footer .links {
+    display: inline-block;
+    padding: 60px;
+}
+
+footer .links p {
+
+    margin: 5px auto;
+    width: 150px;
+    line-height: 31px;
+}
+
+footer .rights {
+    color: rgb(196, 196, 196);
+    padding: 25px;
+    font-weight: 900;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: small;
+}
+
+footer .links ul li {
+    display: grid;
+    margin: auto;
+}
+
+@media (min-width: 1000px) {
+    .course img {
+        width: 400px;
+        height: 200px;
+    }
+
+}
